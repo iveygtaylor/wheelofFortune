@@ -20,6 +20,7 @@ function Game(){
 	this.letterChoice = "";
 	this.guesses = [];
 	this.spinWheel;
+
 	this.start = function(){
 		console.log('game started');
 		this.start_wheel();
@@ -29,10 +30,12 @@ function Game(){
 		console.log(this.answer);
 		for (var i=0; i < this.answer.length; i++){
 			if(this.guesses.indexOf(this.answer[i]) == -1 ){
-				//this.display[i] = "_ ";
-				this.display[i] = '<div class="tile"><h1>&nbsp;</h1></div>'
+				// this.display[i] = "_ ";
+				this.display[i] = '<div class="tile" id="tile-'+(i+1)+'"><h1>&nbsp;</h1></div>';
+				document.getElementById("guesses").innerHTML = "Oops! That letter is not in the phrase. Spin again!"
 			} else {
-				this.display[i] = this.answer[i] + " ";
+				this.display[i] = '<div class="tile" id="tile-'+(i+1)+'"><h1>'+this.answer[i]+'</h1></div>';
+				// this.answer[i] + " ";
 			}
 			this.output += this.display[i];
 		}
@@ -41,7 +44,8 @@ function Game(){
 		this.output = "";		
 	}
 	this.start_wheel = function(){
-		this.spinWheel = new Winwheel({
+		console.log("wheel should fired");
+		 this.spinWheel = new Winwheel({
 			'canvasId' : 'myCanvas',
 			'linewidth' : 10, 
 			'numSegments' : 7,
@@ -100,7 +104,7 @@ function Game(){
 		// 	}
 		// }	
 
-	};
+	}
 
 }
 

@@ -2,22 +2,65 @@
 <html>
 	<head>
 		<title>Wheel of Fortune Game</title>
-		<link rel="stylesheet" type="text/css" href="wof.css">
+		<link rel="stylesheet" type="text/css" href="css/wof.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<script
 		  src="http://code.jquery.com/jquery-3.1.1.js"
 		  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
 		  crossorigin="anonymous"></script>
-		  <script src="cookies.js"></script>	  
+		 <script src="cookies.js"></script>
+		 <script src="Winwheel.js"></script>
+		 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>	  
 	</head>
 <body>
-	<div id="wrapper">
-		<h1>Simple Wheel of Fortune Game</h1>
-		<h2>The Category is: <strong>Programming Terms</strong>
-		<p id="guesses">You have 10 chances to guess letters and solve the puzzle</p>
-		<div id="clue">
-		<h3 id="letterChoice"></h3>
-		Enter a letter: <input field="text" id="letterField">
-		<button input="button" field="text" id="letterButton" onclick="submit();">Submit</button>
+	<div id="mainWrapper">
+		<div class="row">
+			<h1 class="col-md-6. col-md-offset-3">Wheel of Less Fortune Game</h1>
+		</div>
+		<div class="row">
+			<h2 class="col-md-5. col-md-offset-3">The Category is: Web Dev Terms!</h2>
+		</div>
+		<br/>
+		<br/>
+		<div class="row">
+			<div class="col-md-4. col-md-offset-3">
+				<p id="guesses">You have 10 chances to guess letters and solve the puzzle</p>
+				<div id="clue">
+					<h3 id="letterChoice"></h3>
+					Enter a letter: <input field="text" id="letterField">
+					<button input="button" field="text" id="letterButton" onclick="game.guess();">Submit</button>
+				</div>
+				</div>
+			</div>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<div id="canvasContainer">
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-2"></div>
+				<div class="col-md-3">
+					<img id="prizePointer" src="pointer.png" width="50" height="50" />
+				</div>
+			<div class="row">
+				<div class="col-md-6. col-md-offset-4">
+					<canvas id='myCanvas' width='600' height='500'>
+	    				<!--Canvas not supported, use another browser.-->
+					</canvas>
+				</div>
+			</div>
+			<div class="row">
+			<br/>
+				<div class="col-md-12. col-md-offset-7">
+				<button type='button' class="btn btn-success btn-lg" id='wheelButton' onclick="this.start_wheel();">Spin the Wheel</button>
+				</div>	
+				<!--<div class="col-md-12">
+					<img src="ladyFan.png" width="400" height="400">
+				</div>-->			
+			</div>
 		</div>
 	<script src="wof.js"></script>
 	</div>

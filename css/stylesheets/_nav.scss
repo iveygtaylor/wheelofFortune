@@ -1,0 +1,17 @@
+$font: 30px;
+
+nav {
+	@include radial-gradient(#79d279, #c6ecc6); 
+	ul {
+		margin: 0;
+		padding-left: 45px;
+
+	}
+	li {
+		display: inline-block;
+		font-size:$font;
+		color: shade(grey, 35%);
+		padding-left: 100px;
+
+	}
+}

@@ -1,0 +1,11 @@
+/*in your main sass files*/
+@import 'bourbon/bourbon';
+@import 'button';
+@import 'nav';
+@import 'layout';
+
+
+@for $i from 1 through 6 {
+	.cell-#{$i} {font-size: 12px * $i;}
+};
+

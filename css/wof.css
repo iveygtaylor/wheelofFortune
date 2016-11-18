@@ -1,0 +1,36 @@
+
+
+#canvasContainer {
+	position: relative;
+	width: 750px;
+};
+
+#myCanvas{
+	z-index: 1;
+}
+
+#prizePointer{
+	position: absolute;
+	left: 275px;
+	top: -50px;
+	z-index: 999;
+}
+
+
+#guesses{
+	font-size: 18px;
+}
+
+.tile{
+	border:1px solid red;
+	height:70px;
+	width: 50px;
+	display: inline-block;
+	background-color: gray;
+	margin: 3px;
+	text-align: center;
+}
+
+#letterChoice {
+	font-size: 20px;
+}

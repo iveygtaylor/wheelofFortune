@@ -32,7 +32,8 @@ function Game(){
 			if(this.guesses.indexOf(this.answer[i]) == -1 ){
 				// this.display[i] = "_ ";
 				this.display[i] = '<div class="tile" id="tile-'+(i+1)+'"><h1>&nbsp;</h1></div>';
-				document.getElementById("guesses").innerHTML = "Oops! That letter is not in the phrase. Spin again!"
+				/*This message now displays in place of the original tries message. Need to turn off and on appropriately.
+				document.getElementById("guesses").innerHTML = "Oops! That letter is not in the phrase. Spin again!"*/
 			} else {
 				this.display[i] = '<div class="tile" id="tile-'+(i+1)+'"><h1>'+this.answer[i]+'</h1></div>';
 				// this.answer[i] + " ";
